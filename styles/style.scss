@@ -5,8 +5,10 @@ $primary-color: #4C7BF3;
 $secondary-color-1: #C2D3FF;
 $secondary-color-2: #FF5263;
 $neutral-color-1: #969696;
-$neutral-color-2: #151F29;
+$neutral-color-2: #15202A;
 $background-color: #F2F2F2;
+$placeholder-color: #B8C7ED;
+$form-light: #fff;
 $default-font: 'Libre Franklin', sans-serif;
 $rem-base: 16px;
 
@@ -70,7 +72,7 @@ MOBILE COMPONENT
 
 .container {
     @extend .center-flex;
-    height: 90vh;
+    height: 100vh;
     .launch-component {
         @extend .center-flex;
         .ping-logo {
@@ -78,7 +80,59 @@ MOBILE COMPONENT
         }
         .launch-info {
             order: 2;
+            padding: rem-calc(32px 0 72px 0);
+            h1, h2 {
+                font-weight: 300;
+            }
+            h1 {
+                color: $neutral-color-1;
+                font-size: rem-calc(22px);
+                line-height: rem-calc(32px);
+            }
+            .bold-soon {
+                @extend h1;
+                color: $neutral-color-2;
+                font-weight: 700;
+            }
+            h2 {
+                color: $neutral-color-2;
+                font-size: rem-calc(12px);
+                line-height: rem-calc(15px);
+                padding: rem-calc(15px 0 32px 0);
+            }
+            .email-form {
+                @extend .center-flex;
+                .subscribe-input, .subscribe-btn {
+                    height: rem-calc(40px);
+                    border-radius: 28px;
+                    font-size: rem-calc(12px);
+
+                }
+                .subscribe-input {
+                    border: 1px solid $secondary-color-1;
+                    width: rem-calc(281px);
+                    background-color: $form-light;
+                }
+                .subscribe-input::placeholder {
+                    color: $placeholder-color;
+                    padding: rem-calc(10px 32px);
+                    line-height: rem-calc(20px);
+                }
+                .subscribe-btn {
+                    cursor: pointer;
+                    width: rem-calc(282px);
+                    border-style: none;
+                    background-color: $primary-color;
+                    margin-top: rem-calc(10px);
+                    color: $form-light;
+                    line-height: rem-calc(16px);
+                    font-weight: 600;
+                    box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.230414);
+                }
+
+            }
         }
+        
         .stat-graphic {
             width: rem-calc(320px);
             height: rem-clac(192px);
@@ -88,13 +142,17 @@ MOBILE COMPONENT
 }
 
 .footer-info {
-    height: 10vh;
-    position: fixed;
-    left: 50%;
-    bottom: rem-calc(37);
-    transform: translate(-50%, -50%);
+    padding-top: rem-calc(120px);
+    .middle {
+        padding: rem-calc(0 11.71px);
+    }
+    .copyright {
+        padding: rem-calc(27px 0 10px 0);
+        line-height: rem-calc(12px);
+        font-size: rem-calc(10px);
+        color: $neutral-color-1;
+    }
     .attribution {
-        padding-top: 1rem;
         font-size: rem-calc(10px);
         a {
             color: $primary-color;

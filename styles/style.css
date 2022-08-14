@@ -22,7 +22,7 @@ html, body {
 MOBILE COMPONENT
 ---------------------
 */
-.center-flex, .container .launch-component, .container {
+.center-flex, .container .launch-component .launch-info .email-form, .container .launch-component, .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,13 +30,68 @@ MOBILE COMPONENT
 }
 
 .container {
-  height: 90vh;
+  height: 100vh;
 }
 .container .launch-component .ping-logo {
   order: 1;
 }
 .container .launch-component .launch-info {
   order: 2;
+  padding: 2rem 0 4.5rem 0;
+}
+.container .launch-component .launch-info h1, .container .launch-component .launch-info .bold-soon, .container .launch-component .launch-info h2 {
+  font-weight: 300;
+}
+.container .launch-component .launch-info h1, .container .launch-component .launch-info .bold-soon {
+  color: #969696;
+  font-size: 1.375rem;
+  line-height: 2rem;
+}
+.container .launch-component .launch-info .bold-soon {
+  color: #15202A;
+  font-weight: 700;
+}
+.container .launch-component .launch-info h2 {
+  color: #15202A;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  padding: 0.9375rem 0 2rem 0;
+}
+.container .launch-component .launch-info .email-form .subscribe-input, .container .launch-component .launch-info .email-form .subscribe-btn {
+  height: 2.5rem;
+  border-radius: 28px;
+  font-size: 0.75rem;
+}
+.container .launch-component .launch-info .email-form .subscribe-input {
+  border: 1px solid #C2D3FF;
+  width: 17.5625rem;
+  background-color: #fff;
+}
+.container .launch-component .launch-info .email-form .subscribe-input::-moz-placeholder {
+  color: #B8C7ED;
+  padding: 0.625rem 2rem;
+  line-height: 1.25rem;
+}
+.container .launch-component .launch-info .email-form .subscribe-input:-ms-input-placeholder {
+  color: #B8C7ED;
+  padding: 0.625rem 2rem;
+  line-height: 1.25rem;
+}
+.container .launch-component .launch-info .email-form .subscribe-input::placeholder {
+  color: #B8C7ED;
+  padding: 0.625rem 2rem;
+  line-height: 1.25rem;
+}
+.container .launch-component .launch-info .email-form .subscribe-btn {
+  cursor: pointer;
+  width: 17.625rem;
+  border-style: none;
+  background-color: #4C7BF3;
+  margin-top: 0.625rem;
+  color: #fff;
+  line-height: 1rem;
+  font-weight: 600;
+  box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.230414);
 }
 .container .launch-component .stat-graphic {
   width: 20rem;
@@ -45,14 +100,18 @@ MOBILE COMPONENT
 }
 
 .footer-info {
-  height: 10vh;
-  position: fixed;
-  left: 50%;
-  bottom: 2.3125rem;
-  transform: translate(-50%, -50%);
+  padding-top: 7.5rem;
+}
+.footer-info .middle {
+  padding: 0 0.731875rem;
+}
+.footer-info .copyright {
+  padding: 1.6875rem 0 0.625rem 0;
+  line-height: 0.75rem;
+  font-size: 0.625rem;
+  color: #969696;
 }
 .footer-info .attribution {
-  padding-top: 1rem;
   font-size: 0.625rem;
 }
 .footer-info .attribution a {
