@@ -1,0 +1,109 @@
+@use "sass:math";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+$primary-color: #4C7BF3;
+$secondary-color-1: #C2D3FF;
+$secondary-color-2: #FF5263;
+$neutral-color-1: #969696;
+$neutral-color-2: #151F29;
+$background-color: #F2F2F2;
+$default-font: 'Libre Franklin', sans-serif;
+$rem-base: 16px;
+
+
+//Function to convert values to rem.
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base)  {
+    $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+    @if ($value == 0rem) { 
+        $value: 0;
+     } // Turn 0rem into 0
+    @return $value;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+    $max: length($values);
+    @if $max == 1 { 
+        @return convert-to-rem(nth($values, 1), $base-value); 
+    }
+    $remValues: ();
+    @for $i from 1 through $max {
+        $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+    }
+    @return $remValues;
+}
+
+/*
+---------------------
+DEFAULTS
+---------------------
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    box-sizing: border-box;
+    font-family: $default-font;
+    font-weight: 300;
+    text-align: center;
+    background-color: $background-color;
+}
+
+/*
+---------------------
+MOBILE COMPONENT
+---------------------
+*/
+
+.center-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+}
+
+.container {
+    @extend .center-flex;
+    height: 90vh;
+    .launch-component {
+        @extend .center-flex;
+        .ping-logo {
+            order:1;
+        }
+        .launch-info {
+            order: 2;
+        }
+        .stat-graphic {
+            width: rem-calc(320px);
+            height: rem-clac(192px);
+            order: 3;
+        }
+    }
+}
+
+.footer-info {
+    height: 10vh;
+    position: fixed;
+    left: 50%;
+    bottom: rem-calc(37);
+    transform: translate(-50%, -50%);
+    .attribution {
+        padding-top: 1rem;
+        font-size: rem-calc(10px);
+        a {
+            color: $primary-color;
+        }
+    }
+}
+
+/*
+---------------------
+MOBILE TYPOGRAPHY
+---------------------
+*/

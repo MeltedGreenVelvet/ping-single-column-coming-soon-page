@@ -1,1 +1,66 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+/*
+---------------------
+DEFAULTS
+---------------------
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  background-color: #F2F2F2;
+}
+
+/*
+---------------------
+MOBILE COMPONENT
+---------------------
+*/
+.center-flex, .container .launch-component, .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 90vh;
+}
+.container .launch-component .ping-logo {
+  order: 1;
+}
+.container .launch-component .launch-info {
+  order: 2;
+}
+.container .launch-component .stat-graphic {
+  width: 20rem;
+  height: rem-clac(192px);
+  order: 3;
+}
+
+.footer-info {
+  height: 10vh;
+  position: fixed;
+  left: 50%;
+  bottom: 2.3125rem;
+  transform: translate(-50%, -50%);
+}
+.footer-info .attribution {
+  padding-top: 1rem;
+  font-size: 0.625rem;
+}
+.footer-info .attribution a {
+  color: #4C7BF3;
+}
+
+/*
+---------------------
+MOBILE TYPOGRAPHY
+---------------------
+*//*# sourceMappingURL=style.css.map */
