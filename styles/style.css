@@ -17,11 +17,6 @@ html, body {
   background-color: #F2F2F2;
 }
 
-/*
----------------------
-MOBILE COMPONENT
----------------------
-*/
 .center-flex, .container .launch-component .launch-info .email-form, .container .launch-component, .container {
   display: flex;
   flex-direction: column;
@@ -29,6 +24,11 @@ MOBILE COMPONENT
   justify-content: center;
 }
 
+/*
+---------------------
+MOBILE COMPONENT
+---------------------
+*/
 .container {
   height: 100vh;
 }
@@ -95,7 +95,7 @@ MOBILE COMPONENT
 }
 .container .launch-component .stat-graphic {
   width: 20rem;
-  height: rem-clac(192px);
+  height: 12rem;
   order: 3;
 }
 
@@ -120,6 +120,26 @@ MOBILE COMPONENT
 
 /*
 ---------------------
-MOBILE TYPOGRAPHY
+DESKTOP COMPONENT
 ---------------------
-*//*# sourceMappingURL=style.css.map */
+*/
+@media (min-width: 1200px) {
+  .container {
+    width: 44.5rem;
+  }
+  .container .launch-component .ping-logo {
+    width: 5.625rem;
+    height: 2.4375rem;
+  }
+  .container .launch-component .launch-info h1, .container .launch-component .launch-info .bold-soon {
+    font-size: 3rem;
+    line-height: 3.75rem;
+  }
+  .container .launch-component .launch-info h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  .container .launch-component .launch-info .ping-logo {
+    content: "images/logo.desktop.svg";
+  }
+}/*# sourceMappingURL=style.css.map */
