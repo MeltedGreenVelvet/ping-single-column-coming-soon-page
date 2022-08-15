@@ -43,24 +43,25 @@ MOBILE COMPONENT
   font-weight: 300;
 }
 .container .launch-component .launch-info h1, .container .launch-component .launch-info .bold-soon {
-  color: #969696;
   font-size: 1.375rem;
   line-height: 2rem;
+  color: #969696;
 }
 .container .launch-component .launch-info .bold-soon {
   color: #15202A;
   font-weight: 700;
 }
 .container .launch-component .launch-info h2 {
-  color: #15202A;
   font-size: 0.75rem;
   line-height: 0.9375rem;
+  color: #15202A;
   padding: 0.9375rem 0 2rem 0;
 }
 .container .launch-component .launch-info .email-form .subscribe-input, .container .launch-component .launch-info .email-form .subscribe-btn {
   height: 2.5rem;
   border-radius: 28px;
   font-size: 0.75rem;
+  line-height: 1.25rem;
 }
 .container .launch-component .launch-info .email-form .subscribe-input {
   border: 1px solid #C2D3FF;
@@ -70,17 +71,14 @@ MOBILE COMPONENT
 .container .launch-component .launch-info .email-form .subscribe-input::-moz-placeholder {
   color: #B8C7ED;
   padding: 0.625rem 2rem;
-  line-height: 1.25rem;
 }
 .container .launch-component .launch-info .email-form .subscribe-input:-ms-input-placeholder {
   color: #B8C7ED;
   padding: 0.625rem 2rem;
-  line-height: 1.25rem;
 }
 .container .launch-component .launch-info .email-form .subscribe-input::placeholder {
   color: #B8C7ED;
   padding: 0.625rem 2rem;
-  line-height: 1.25rem;
 }
 .container .launch-component .launch-info .email-form .subscribe-btn {
   cursor: pointer;
@@ -89,7 +87,6 @@ MOBILE COMPONENT
   background-color: #4C7BF3;
   margin-top: 0.625rem;
   color: #fff;
-  line-height: 1rem;
   font-weight: 600;
   box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.230414);
 }
@@ -102,13 +99,16 @@ MOBILE COMPONENT
 .footer-info {
   padding-top: 7.5rem;
 }
+.footer-info .social-media-icons {
+  padding-top: 7.5rem;
+}
 .footer-info .middle {
   padding: 0 0.731875rem;
 }
 .footer-info .copyright {
   padding: 1.6875rem 0 0.625rem 0;
-  line-height: 0.75rem;
   font-size: 0.625rem;
+  line-height: 0.75rem;
   color: #969696;
 }
 .footer-info .attribution {
@@ -124,9 +124,6 @@ DESKTOP COMPONENT
 ---------------------
 */
 @media (min-width: 1200px) {
-  .container {
-    width: 44.5rem;
-  }
   .container .launch-component .ping-logo {
     width: 5.625rem;
     height: 2.4375rem;
@@ -141,5 +138,23 @@ DESKTOP COMPONENT
   }
   .container .launch-component .launch-info .ping-logo {
     content: "images/logo.desktop.svg";
+  }
+  .container .launch-component .launch-info .email-form {
+    flex-direction: row;
+  }
+  .container .launch-component .launch-info .email-form .subscribe-input {
+    width: 26.3125rem;
+  }
+  .container .launch-component .launch-info .email-form .subscribe-btn {
+    margin-left: 1rem;
+    width: 12.5rem;
+    margin-top: 0;
+  }
+  .container .launch-component .stat-graphic {
+    width: 40rem;
+    height: 23.9375rem;
+  }
+  .social-media-icons {
+    padding-top: 4.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

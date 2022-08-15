@@ -49,6 +49,11 @@ $rem-base: 16px;
     height: rem-calc($height);
 }
 
+@mixin fontsizeheight($font-size, $line-height){
+    font-size: rem-calc($font-size);
+    line-height: rem-calc($line-height);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -90,9 +95,8 @@ MOBILE COMPONENT
                 font-weight: 300;
             }
             h1 {
+                @include fontsizeheight(22, 32);
                 color: $neutral-color-1;
-                font-size: rem-calc(22px);
-                line-height: rem-calc(32px);
             }
             .bold-soon {
                 @extend h1;
@@ -100,9 +104,8 @@ MOBILE COMPONENT
                 font-weight: 700;
             }
             h2 {
+                @include fontsizeheight(12, 15);
                 color: $neutral-color-2;
-                font-size: rem-calc(12px);
-                line-height: rem-calc(15px);
                 padding: rem-calc(15px 0 32px 0);
             }
             .email-form {
@@ -110,8 +113,7 @@ MOBILE COMPONENT
                 .subscribe-input, .subscribe-btn {
                     height: rem-calc(40px);
                     border-radius: 28px;
-                    font-size: rem-calc(12px);
-
+                    @include fontsizeheight(12, 20);
                 }
                 .subscribe-input {
                     border: 1px solid $secondary-color-1;
@@ -121,7 +123,6 @@ MOBILE COMPONENT
                 .subscribe-input::placeholder {
                     color: $placeholder-color;
                     padding: rem-calc(10px 32px);
-                    line-height: rem-calc(20px);
                 }
                 .subscribe-btn {
                     cursor: pointer;
@@ -130,7 +131,6 @@ MOBILE COMPONENT
                     background-color: $primary-color;
                     margin-top: rem-calc(10px);
                     color: $form-light;
-                    line-height: rem-calc(16px);
                     font-weight: 600;
                     box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.230414);
                 }
@@ -147,13 +147,15 @@ MOBILE COMPONENT
 
 .footer-info {
     padding-top: rem-calc(120px);
+    .social-media-icons {
+        padding-top: rem-calc(120);
+    }
     .middle {
         padding: rem-calc(0 11.71px);
     }
     .copyright {
         padding: rem-calc(27px 0 10px 0);
-        line-height: rem-calc(12px);
-        font-size: rem-calc(10px);
+        @include fontsizeheight(10, 12);
         color: $neutral-color-1;
     }
     .attribution {
@@ -171,23 +173,36 @@ DESKTOP COMPONENT
 */
 
 @media (min-width: 1200px) {
-    .container {
-        width: rem-calc(712px);
-    }
     .container .launch-component .ping-logo {
         @include widhei(90, 39);
     }
     .container .launch-component .launch-info {
         h1 {
-            font-size: rem-calc(48px);
-            line-height: rem-calc(60px);
+            @include fontsizeheight(48, 60);
         }
         h2 {
-            font-size: rem-calc(20px);
-            line-height: rem-calc(24px);
+            @include fontsizeheight(20, 24);
         }
         .ping-logo {
             content: ('images/logo.desktop.svg');
         }
+        .email-form {
+            flex-direction: row;
+            .subscribe-input {
+                width: rem-calc(421);
+            }
+            .subscribe-btn {
+                margin-left: 1rem;
+                width: rem-calc(200);
+                margin-top: 0;
+            }
+        }
+    }
+    .container .launch-component .stat-graphic {
+        @include widhei(640, 383);
+    }
+
+    .social-media-icons {
+        padding-top: rem-calc(72);
     }
 }
