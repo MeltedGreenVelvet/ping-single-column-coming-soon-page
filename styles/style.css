@@ -68,6 +68,18 @@ MOBILE COMPONENT
   width: 17.5625rem;
   background-color: #fff;
 }
+.container .launch-component .launch-info .email-form .subscribe-input:focus, .container .launch-component .launch-info .email-form .subscribe-input:active, .container .launch-component .launch-info .email-form .subscribe-input:hover {
+  border-color: #FF5263;
+}
+.container .launch-component .launch-info .email-form .subscribe-input:focus::-moz-placeholder, .container .launch-component .launch-info .email-form .subscribe-input:active::-moz-placeholder, .container .launch-component .launch-info .email-form .subscribe-input:hover::-moz-placeholder {
+  color: #15202A;
+}
+.container .launch-component .launch-info .email-form .subscribe-input:focus:-ms-input-placeholder, .container .launch-component .launch-info .email-form .subscribe-input:active:-ms-input-placeholder, .container .launch-component .launch-info .email-form .subscribe-input:hover:-ms-input-placeholder {
+  color: #15202A;
+}
+.container .launch-component .launch-info .email-form .subscribe-input:focus::placeholder, .container .launch-component .launch-info .email-form .subscribe-input:active::placeholder, .container .launch-component .launch-info .email-form .subscribe-input:hover::placeholder {
+  color: #15202A;
+}
 .container .launch-component .launch-info .email-form .subscribe-input::-moz-placeholder {
   color: #B8C7ED;
   padding: 0.625rem 2rem;
